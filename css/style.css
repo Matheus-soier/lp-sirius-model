@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100vw;
+    height: max-content;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    height: max-content;
+    margin: 8px 20px;
+}
+
+.logo {
+    width: 150px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.menu-mobile {
+    display: none;
+    cursor: pointer;
+    color: #f9f7f6;
+    font-size: 25px;
+}
+
+.menu-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-desktop a {
+    display: flex;
+    align-items: center;
+    color: #f9f7f6;
+    text-decoration: none;
+    gap: 3px;
+}
+
+.menu-desktop nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    gap: 25px;
+}
+
+ul li a {
+    position: relative;
+    display: inline-block; 
+    text-decoration: none; 
+}
+
+ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; 
+    bottom: -3px; 
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.3s ease-in-out; 
+}
+
+ul li a:hover::after {
+    width: 100%;
+}
+
+.buttons-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.login {
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #f9f7f6;
+}
+
+.open-account {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    border-radius: 8px;
+    color: #000000;
+}
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: calc(100vh - 80px);
+}
+
+main h1 {
+    color: #f9f7f6;
+    text-transform: uppercase;
+}
+
+main img {
+    width: 400px;
+}
+
+
+@media (max-width: 1200px) {
+    .item-menu-1,
+    .item-menu-2,
+    .item-menu-3,
+    .item-menu-4 {
+        display: none;
+    }
+}
+
+@media (max-width: 890px) {
+    .menu-desktop,
+    .buttons-desktop {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: flex;
+    }
+}
+
+
