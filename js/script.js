@@ -27,5 +27,6 @@ function atualizarLargura() {
     larguraTela = window.innerWidth;
     if(larguraTela >= 890) {
         menuMobile.style.display = 'none';
+        barMobile.style.background = "#000";
     }
 }
